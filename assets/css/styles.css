@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'info landing';
+  align-items: center;
+
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 95%;
+  height: 80%;
+}
+
+.logo {
+  align-self: flex-start;
+  height: 7rem;
+}
+
+.txt {
+  font-weight: 600;
+  font-size: 3.1rem;
+  color: var(--primary-light);
+}
+
+.btn {
+  margin-top: 2.5rem;
+  border: 0;
+  border-radius: 1rem;
+  padding: 1.1rem 3.4rem;
+  
+  background-color: var(--primary-light);
+  color: white;
+
+  cursor: pointer;
+  font-size: 2.2rem;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.landing  {
+  grid-area: landing;
+  background-color: orangered;
+}

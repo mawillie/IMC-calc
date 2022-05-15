@@ -1,0 +1,19 @@
+:root {
+  font-size: 62.5%;
+  --primary-light: #03C4A1;
+  --primary-dark: #05997e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Lato;
+}
