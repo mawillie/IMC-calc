@@ -5,6 +5,20 @@
   height: 100vh;
 }
 
+.main::before {
+  width: 100vw;
+  height: 100vh;
+  content: '';
+
+  background-image: url(../images/bg.svg);
+  background-position: 40vw;
+  background-size: 80vw auto;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 0;
+  position: fixed;
+}
+
 .content {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -16,6 +30,8 @@
   height: 80%;
   margin: 0 auto;
 }
+
+/* ==== INFO ======================= */ 
 
 .info {
   grid-area: info;
@@ -55,7 +71,153 @@
   background-color: var(--primary-dark);
 }
 
+/* ==== LANDING ======================= */ 
+
+
 .landing  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+
   grid-area: landing;
-  background-color: orangered;
+  width: 90%;
 }
+
+.landing__img {
+  width: 65%;
+}
+
+/* ==== RESPONSIVO ======================= */ 
+
+@media (min-width: 1600px ) and (max-width: 1930px) {
+  .info {
+    height: 57%;
+  }
+
+  .logo {
+    height: 9rem;
+  }
+
+  .txt {
+    font-size: 3.4rem;
+  }
+
+  .btn {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) and   (min-height: 750px) and (max-width: 1599px) {
+
+  .main::before {
+    background-position: 40vw;
+    background-size: 100vw auto;
+  }
+
+  .info {
+    height: 57%;
+  }
+
+  .logo {
+    height: 9rem;
+  }
+
+  .txt {
+    font-size: 3.4rem;
+  }
+
+  .btn {
+    font-size: 2.5rem;
+  }
+
+  .landing__img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1280px) {
+
+  .main::before {
+    background-position: 40vw;
+    background-size: 110vw auto;
+  }
+
+  .content {
+    height: 40%;
+  }
+
+  .landing__img {
+    width: 75%	;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 899px) {
+
+  .main::before {
+    background-position: 40vw;
+    background-size: 100vh auto;
+  }
+
+  .content {
+  grid-template-columns: 45% 55%;
+  height: 70%;
+  }
+
+  .info {
+    width: 80%;
+    height: 50%;
+  }
+
+  .landing__img {
+    width: 90%	;
+  }
+}
+
+@media (max-width: 720px) {
+
+  .main::before {
+    background: none;
+  }
+
+  .content {
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px 1fr;
+  grid-template-areas: 
+      'info'
+      'landing'
+      ;
+  height: 95%;
+  margin: 0;
+  }
+
+  .info {
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    align-self: center;
+  }
+
+  .landing {
+    background-image: url(../images/bg.svg);
+    background-position: center;
+    background-size: 80vw auto;
+    background-repeat: no-repeat;
+
+    width: 90%;
+    height: auto;
+    padding: 10% 0;
+
+    justify-self: center;
+  }
+
+  .landing__img {
+    width: 70%	;
+  }
+}
+
