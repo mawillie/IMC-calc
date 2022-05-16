@@ -16,4 +16,5 @@ html {
 
 body {
   font-family: Lato;
+  transition: background 0.5 ease;
 }
