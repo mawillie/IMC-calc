@@ -1,3 +1,26 @@
+
+body {
+  background-color: white;
+}
+
+.dark {
+  background-color: var(--darkmode);
+}
+
+body.dark .switcher__label {
+  background-color: var(--darkmode);
+  border-color: var(--primary-dark);
+}
+
+body.dark .btn {
+  background-color: var(--darkmode);
+}
+
+body.dark .btn:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
 /* ==== SWITCHER ========================== */
 
 .switcher {
@@ -20,11 +43,11 @@
   width: 7rem;
   height: 3.1rem;
   background-color: white;
-  border: 1px solid var(--primary-dark);
+  border: 0.1rem solid var(--primary-light);
   border-radius: 1.5rem;
 
   position: relative;
-  padding: 1rem 0.3rem;
+  padding: 1rem 0.2rem;
   cursor: pointer;
 
   display: flex;
@@ -38,7 +61,7 @@
 }
 
 .ball {
-  background-color: var(--primary-dark);
+  background-color: var(--primary-light);
   border-radius: 50%;
 
   position: absolute;
@@ -110,18 +133,22 @@
 .btn {
   margin-top: 2.5rem;
   border: 0;
-  border-radius: 1rem;
+  border-radius: 1.1rem;
   padding: 1.1rem 3.4rem;
   
   background-color: var(--primary-light);
   color: white;
+  border: 2px solid var(--primary-light);
 
   cursor: pointer;
   font-size: 2.2rem;
+  
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
 }
 
 /* ==== LANDING ======================= */ 

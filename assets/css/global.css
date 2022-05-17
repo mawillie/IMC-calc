@@ -2,6 +2,7 @@
   font-size: 62.5%;
   --primary-light: #03C4A1;
   --primary-dark: #05997e;
+  --darkmode: #333333;
 }
 
 * {
@@ -16,5 +17,14 @@ html {
 
 body {
   font-family: Lato;
-  transition: background 0.5 ease;
+  transition: background 0.3s ease;
+}
+
+.seletor {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
