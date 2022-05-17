@@ -1,0 +1,121 @@
+
+/* ==== GERAL ========================== */
+
+
+body {
+
+}
+
+
+/* ==== MAIN ========================== */
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 90%;
+  width: 90%;
+
+}
+
+/* ==== INPUT ========================== */
+
+
+.dados {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+  height: 44rem;
+  width: 40rem;
+}
+
+.item {
+  padding: 1rem 0;
+  display: flex;
+  justify-self: space-around;
+  flex-direction: column;
+}
+
+.logo {
+  align-self: flex-start;
+  height: 3.3rem;
+}
+
+.txt {
+  font-weight: 600;
+  font-size: 3.1rem;
+  color: var(--primary-light);
+  line-height: 95%;
+}
+
+.back {
+  margin-top: 1.2rem;
+  font-size: 1.7rem;
+  color: var(--primary-dark);
+}
+
+
+/* ==== FORM ========================== */
+
+
+.form {
+  width: 87%;
+  height: 57%;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.ipt {
+  padding: 1.4rem 2rem;
+  border: 0;
+  border-radius: 1.5rem;
+
+  font-size: 2.5rem;
+  color: #495055;
+  background-color: #F2F2F2;
+  outline: 0.2rem solid #d9d9d9;
+
+}
+
+.btn {
+  margin-top: 1.5rem;
+  padding: 1.3rem 2rem;
+
+  font-size: 2.5rem;
+
+  color: white;
+  background-color: var(--primary-light);
+  border: 0.2rem solid var(--primary-light);
+  border-radius: 1.5rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+
+/* ==== RESULT ========================== */
+
+
+.result {
+  background-color: orangered;
+  width: 40rem;
+  height: 100%
+}
