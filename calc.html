@@ -12,43 +12,76 @@
         <title>IMC Calc</title>
     </head>
     <body>
-
         <div class="main">
-
             <div class="container">
-
                 <div class="dados">
-                    <img class="logo" src="./assets/images/logo.svg" alt="logo">
+                    <img
+                        class="logo"
+                        src="./assets/images/logo.svg"
+                        alt="logo"
+                    />
 
                     <div class="item">
-                        <p class="txt">Preencha os campos abaixo e veja seu resultado</p>
+                        <p class="txt">
+                            Preencha os campos abaixo e veja seu resultado
+                        </p>
                         <a class="back" href="./index.html">Voltar</a>
                     </div>
 
                     <form action="" class="form">
-                        <input class="ipt" type="number" placeholder="Peso (Kg)">
-                        <input class="ipt" type="number" placeholder="Altura (cm)">
+                        <input
+                            class="ipt"
+                            type="number"
+                            placeholder="Peso (Kg)"
+                        />
+                        <input
+                            class="ipt"
+                            type="number"
+                            placeholder="Altura (cm)"
+                        />
                         <button class="btn">Calcular</button>
                     </form>
                 </div>
 
                 <div class="result">
-
                     <div class="imc">
                         <span class="span">Seu IMC</span>
-                        <span class="output">—</span>
+                        <span class="output">-</span>
                         <span class="status">Status</span>
                     </div>
 
-                    <div class="table">
-                        
+                    <div class="ref">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Abaixo do Peso</td>
+                                    <td class="pos">< 18.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Peso Normal</td>
+                                    <td class="pos">18.5 - 24.9</td>
+                                </tr>
+                                <tr>
+                                    <td>Sobrepeso</td>
+                                    <td class="pos">25 - 29.9</td>
+                                </tr>
+                                <tr>
+                                    <td>Obesidade Grau I</td>
+                                    <td class="pos">30 - 34.9</td>
+                                </tr>
+                                <tr>
+                                    <td>Obesidade Grau II</td>
+                                    <td class="pos">35 - 39.9</td>
+                                </tr>
+                                <tr>
+                                    <td>Obesidade Grau III</td>
+                                    <td class="pos">>= 40</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </body>
 </html>

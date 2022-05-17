@@ -18,6 +18,19 @@ body {
   height: 100vh;
 }
 
+.main::before {
+  width: 100%;
+  height: 100%;
+  content: '';
+
+  background: url(../images/bg_2.svg) no-repeat 40vw;
+  background-size: 80vw;
+
+  position: fixed;
+  z-index: -1;
+  top: 0;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -80,14 +93,23 @@ body {
 
 .ipt {
   padding: 1.4rem 2rem;
-  border: 0;
+  border: 0.2rem solid #d9d9d9;
   border-radius: 1.5rem;
 
   font-size: 2.5rem;
   color: #495055;
   background-color: #F2F2F2;
-  outline: 0.2rem solid #d9d9d9;
+}
 
+.ipt:focus,
+.ipt:focus::placeholder {
+  color: black;
+  border-color: black;
+
+}
+
+.ipt::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .btn {
@@ -115,7 +137,93 @@ body {
 
 
 .result {
-  background-color: orangered;
-  width: 40rem;
-  height: 100%
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 45rem;
+  height: 54rem
 }
+
+/* ==== IMC ========================== */
+
+
+.imc {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 1.6rem;
+
+  width: 90%;
+  height: 40%;
+
+  background-color: #F2F2F2;
+  padding: 2rem 0 2.5rem 0;
+
+  box-shadow: .1rem .1rem 1.8rem rgba(0, 0, 0, 0.5);
+}
+
+.span {
+  font-size: 2.2rem;
+  color: #495055;
+}
+
+.output {
+  font-size: 7rem;
+  color: #495055;
+}
+
+.status {
+  font-size: 3rem;
+  color: #495055;
+}
+
+/* ==== TABLE ========================== */
+
+.ref {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  
+  width: 100%;
+  height: 45%;
+
+  background-color: var(--secondary-dark);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+
+  box-shadow: .1rem .1rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  font-size: 2.2rem;
+  color: white;
+}
+
+td {
+  border-bottom: .2rem solid var(--primary-light);
+}
+
+.pos {
+  text-align: right;
+}
+
+
+/* ==== RESPONSIVO ========================== */
+/* ==== DESKTOP ========================== */
+
+
+
+
+
+/* ==== TABLET ========================== */
+
+
+
+
+
+
+/* ==== MOBILE ========================== */
