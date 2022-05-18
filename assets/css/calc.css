@@ -1,5 +1,34 @@
 
-/* ==== GERAL ========================== */
+/* ==== CORES ========================== */
+
+
+.imc.green {
+  background-color: #defcf7;
+}
+
+.imc.green .output,
+.imc.green .status {
+  color: var(--primary-light);
+} 
+
+.imc.yellow {
+  background-color: #fafadd;
+}
+
+.imc.yellow .output,
+.imc.yellow .status {
+  color: #E6BB10;
+} 
+
+.imc.red {
+  background-color: #fdebeb;
+}
+
+.imc.red .output,
+.imc.red .status {
+  color: #FF0601;
+} 
+
 
 
 /* ==== SWITCHER ========================== */
