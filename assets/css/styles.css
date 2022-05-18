@@ -268,9 +268,8 @@ body.dark .btn:hover {
 @media (max-width: 720px) {
 
   .main::before {
-    background: none;
+    content: none;
   }
-
 
   .content {
   grid-template-columns: 1fr;
