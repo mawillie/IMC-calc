@@ -1,15 +1,55 @@
+
+
+/* ==== GERAL ========================== */
+
 const body = document.querySelector("body");
+const logo = document.querySelector(".logo");
+const check = document.querySelector(".switcher__checkbox");
 
 const card = document.querySelector(".imc");
 const output = document.querySelector(".output");
 const statos = document.querySelector(".status");
 
-/* ==== GERAL ========================== */
+
+/* ==== THEME SWITCHER ========================== */
 
 
-function themeSwitcher() {
+window.addEventListener('DOMContentLoaded', function() {
+    const checkColorMode = JSON.parse(localStorage.getItem('color-mode'))
+
+    if (checkColorMode) {
+        check.checked = true
+
+        modeSwitcher('darkmode')
+    } 
+})
+
+check.addEventListener('change', function() {
+
+    if (this.checked) {
+        modeSwitcher('darkmode')
+    }  else {
+        modeSwitcher('lightmode')
+    }
+
+    localStorage.setItem('color-mode', this.checked)
+})
+
+function modeSwitcher(theme) {
     body.classList.toggle("dark");
+
+    if (theme === 'darkmode') {
+        logo.setAttribute(`src`, `./assets/images/logo--darkmode.svg`);
+    } 
+    
+    if (theme === 'lightmode') {
+        logo.setAttribute("src", "./assets/images/logo.svg");
+    }
 }
+
+
+/* ==== IMC ========================== */
+
 
 function calculaImc(peso, altura) {
     let resultado = (peso / altura ** 2).toFixed(1);
@@ -36,7 +76,6 @@ function calculaImc(peso, altura) {
         return [resultado, "Obesidade Grau III", "imc red"];
     }
 }
-
 
 function recebeImc(e) {
     e.preventDefault();

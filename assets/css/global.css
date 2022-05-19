@@ -2,8 +2,13 @@
   font-size: 62.5%;
   --primary-light: #03C4A1;
   --primary-dark: #05997e;
-  --secondary-dark: #01B292;
-  --darkmode: #333333;
+  --primary-dark2: #01B292;
+
+  --darkmode: #222;
+
+  --secondary-dark: #004caf;
+  --secondary-light: #0060df;
+  --secondary-txt: #1979f7;
 }
 
 * {
@@ -18,7 +23,7 @@ html {
 
 body {
   font-family: Lato;
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
 }
 
 .seletor {
@@ -39,7 +44,11 @@ body {
 
 body.dark .switcher__label {
   background-color: var(--darkmode);
-  border-color: var(--primary-dark);
+  border-color: var(--primary-light);
+}
+
+body.dark .ball {
+  background-color: var(--primary-dark);
 }
 
 
@@ -66,7 +75,7 @@ body.dark .switcher__label {
   width: 7rem;
   height: 3.1rem;
   background-color: white;
-  border: 0.1rem solid var(--primary-light);
+  border: 0.1rem solid var(--secondary-light);
   border-radius: 1.5rem;
 
   position: relative;
@@ -84,11 +93,11 @@ body.dark .switcher__label {
 }
 
 .ball {
-  background-color: var(--primary-light);
+  background-color: var(--secondary-light);
   border-radius: 50%;
 
   position: absolute;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease;
 
   width: 2.5rem;
   height: 2.5rem;
